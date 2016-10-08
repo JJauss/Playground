@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Two Column Layout</title>
+  <meta charset="utf-8"/>
+  <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    div { 
+      border: 1px solid grey;
+      border-collapse: collapse;
+
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Header</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3"><h2>Navigation</h2></div>
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-9"><h2>Content</h2><p>
+          lorem ipsum sample data
+        </p></div>
+        <div class="col-md-3"><h2>Sidebar</h2></div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12"><h2>Footer</h2></div>
+  </div>
+</div>
+</body>
+</html>
