@@ -1,0 +1,34 @@
+{
+  "name": "vue-basic-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "jspm install",
+    "build": " npm run build:app",
+    "build:app": "tsc",
+    "start": "lite-server -c ./config/bs-config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "private"
+  },
+  "keywords": [
+    "vue",
+    "evaluation"
+  ],
+  "author": "JJauss",
+  "license": "ISC",
+  "devDependencies": {
+    "jspm": "^0.16.53",
+    "lite-server": "^2.3.0",
+    "typescript": "^2.3.2"
+  },
+  "jspm": {
+    "configFile": "systemjs.config.js",
+    "dependencies": {
+      "vue": "npm:vue@^2.3.2"
+    },
+    "devDependencies": {}
+  }
+}
