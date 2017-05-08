@@ -7,7 +7,9 @@
     "install": "jspm install",
     "build": " npm run build:app",
     "build:app": "tsc",
-    "start": "lite-server -c ./config/bs-config.json"
+    "start:serve": "lite-server -c ./config/bs-config.json",
+    "start:watch": "tsc -w",
+    "start": "concurrently \"npm run start:watch\" \"npm run start:serve\""
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   "author": "JJauss",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^3.4.0",
     "jspm": "^0.16.53",
     "lite-server": "^2.3.0",
     "typescript": "^2.3.2"

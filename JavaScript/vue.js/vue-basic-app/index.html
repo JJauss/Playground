@@ -1,15 +1,22 @@
 <!DOCTYPE>
 <html>
-  <head>
-    <script src="jspm_packages/system.js"></script>
-    <script src="systemjs.config.js"></script>
-    <script type="text/javascript">
-      System.import("./src/app").then(function(){
-        console.log("app was loaded");
-      })
-      </script>
-  </head>
-  <body>
-    <p>This is my simple sample</p>
-  </body>
+
+<head>
+  <script src="jspm_packages/system.js"></script>
+  <script src="systemjs.config.js"></script>
+  <script type="text/javascript">
+    System.import("./src/app").then(function (module) {
+      console.log("app was loaded");
+      new module.App({ el: '#app-root' }).start();
+    })
+  </script>
+</head>
+
+<body>
+  <p>This is my simple sample</p>
+  <div id="app-root">
+    <app-layout/>
+  </div>
+</body>
+
 </html>

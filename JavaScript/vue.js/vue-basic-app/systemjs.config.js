@@ -7,6 +7,12 @@ System.config({
     "npm:*": "jspm_packages/npm/*"
   },
 
+  packages: {
+    "vue": {
+      main: "./dist/vue.common.js"
+    }
+  },
+
   map: {
     "vue": "npm:vue@2.3.2",
     "github:jspm/nodelibs-assert@0.1.0": {

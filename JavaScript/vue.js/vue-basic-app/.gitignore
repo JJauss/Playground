@@ -23,6 +23,8 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+index.js
+src/**/*.js
 
 # Visual Studio 2015 cache/options directory
 .vs/
