@@ -11,17 +11,16 @@ Vue.component('app-layout', {
   '<content>Sample hard coded content</content>' +
   '<footer><small>This is a footer</small></footer>' +
   '</div>'
-})
+});
 
 export class App {
 
-  constructor(public options: Options) { }
+  constructor(private options: Options) { }
 
   start(): void {
     console.info("vue-app was startet.");
     new Vue({
-      el: this.options.el,
-
+      el: this.options.el
     });
   }
 }
