@@ -21,9 +21,16 @@ export class Cell {
 
   private countOfLivingNeigbours() {
     let count: number = 0;
-    count += (this.left && this.left.isAlive()) ? 1 : 0;
-    count += (this.right && this.right.isAlive()) ? 1 : 0;
+    count += this.countOfLiving(this.left);
+    count += this.countOfLiving(this.right);
     return count;
+  }
+
+  private countOfLiving(cell?: Cell): number {
+    if (cell) {
+      return cell.isAlive() ? 1 : 0;
+    }
+    return 0;
   }
 }
 

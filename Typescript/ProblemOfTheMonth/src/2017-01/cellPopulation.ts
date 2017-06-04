@@ -3,9 +3,14 @@ import { Cell, CellState } from "./cell";
 export class CellPopulation {
   public cells: Cell[] = new Array<Cell>();
 
-
-  public push(state: CellState) {
-    this.cells.push(new Cell(state));
+  public push(state: CellState | CellState[]): void {
+    if (typeof state === "string") {
+      this.cells.push(new Cell(state));
+    } else {
+      for (const s of state) {
+        this.push(s);
+      }
+    }
   }
   public nextDay(): CellPopulation {
     this.initPopulation();
@@ -17,6 +22,7 @@ export class CellPopulation {
     }
     return nextDayPopulation;
   }
+
 
   private initPopulation(): void {
     for (let index = 0; index < this.cells.length; index++) {
