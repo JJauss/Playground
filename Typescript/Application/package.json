@@ -30,8 +30,10 @@
   "jspm": {
     "configFile": "systemjs.config.js",
     "dependencies": {
+      "text": "github:systemjs/plugin-text@^0.0.9",
       "traceur": "github:jmcriffey/bower-traceur@^0.0.111",
-      "vue": "npm:vue@^2.3.3"
+      "vue": "npm:vue@^2.3.3",
+      "vue-class-component": "npm:vue-class-component@^5.0.1"
     },
     "devDependencies": {
       "[object Object]": "npm:babel-core@^5.8.24",
@@ -40,6 +42,7 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "vue": "^2.3.3"
+    "vue": "^2.3.3",
+    "vue-class-component": "^5.0.1"
   }
 }

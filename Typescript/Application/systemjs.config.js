@@ -1,5 +1,5 @@
 System.config({
-  baseURL: "./",
+  baseURL: "/",
   defaultJSExtensions: true,
   transpiler: {},
   paths: {
@@ -7,11 +7,26 @@ System.config({
     "npm:*": "jspm_packages/npm/*"
   },
 
+  packages: {
+    "/": {
+      meta: {
+        "*.html": {
+          loader: "text"
+        }
+      },
+    },
+    "vue": {
+      "main": "dist/vue.common.js"
+    }
+  },
+
   map: {
     "[object Object]": "npm:babel-core@5.8.38",
     "[object Object]-runtime": "npm:babel-runtime@5.8.38",
+    "text": "github:systemjs/plugin-text@0.0.9",
     "traceur": "github:jmcriffey/bower-traceur@0.0.111",
     "vue": "npm:vue@2.3.3",
+    "vue-class-component": "npm:vue-class-component@5.0.1",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
@@ -54,6 +69,9 @@ System.config({
     },
     "npm:vm-browserify@0.0.4": {
       "indexof": "npm:indexof@0.0.1"
+    },
+    "npm:vue-class-component@5.0.1": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:vue@2.3.3": {
       "process": "github:jspm/nodelibs-process@0.1.2"
